@@ -39,6 +39,15 @@ class PortfoliosController < ApplicationController
     @portfolios_item = Portfolio.find(params[:id])
   end
 
+  def destroy
+    @portfolios_item = Portfolio.find(params[:id])
+
+    @portfolios_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_path, notice: 'Portfolio Items removed' }
+    end
+  end
+
   private
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body)
