@@ -19,6 +19,22 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def edit
+    @portfolios_item = Portfolio.find(params[:id])
+  end
+
+  def update
+    @portfolios_item = Portfolio.find(params[:id])
+
+    respond_to do |format|
+      if @portfolios_item.update(portfolio_params)
+        format.html { redirect_to portfolios_path, notice: 'Blog was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
   private
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body)
