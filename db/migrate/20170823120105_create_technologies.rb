@@ -1,6 +1,6 @@
-class CreateTehnologies < ActiveRecord::Migration[5.1]
+class CreateTechnologies < ActiveRecord::Migration[5.1]
   def change
-    create_table :tehnologies do |t|
+    create_table :technologies do |t|
       t.string :name
       t.references :portfolio, foreign_key: true
 

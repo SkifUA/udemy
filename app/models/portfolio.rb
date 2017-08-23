@@ -1,6 +1,6 @@
 class Portfolio < ApplicationRecord
-  has_many :tehnologies
-  accepts_nested_attributes_for :tehnologies,
+  has_many :technologies
+  accepts_nested_attributes_for :technologies,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
   include Placeholder

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TehnologyTest < ActiveSupport::TestCase
+class TechnologyTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
