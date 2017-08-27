@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/SkifUA/devcamp_view_tool-
+  revision: c6238aac8e7e80427309f9762133b33520244446
+  specs:
+    devcamp_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -214,6 +220,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  devcamp_view_tool!
   devise (~> 4.2)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)

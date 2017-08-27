@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:n, greeting, class: 'source-greetind')
     end
   end
+
+  def copyright_generator
+    DevcampViewTool::Renderer.copyright('Kuzin Valeriy', 'All rights reserved')
+  end
 end
