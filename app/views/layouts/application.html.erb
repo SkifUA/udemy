@@ -16,12 +16,11 @@
 
     <%= render 'shared/nav', location: 'top' %>
 
-    <%= login_helper.html_safe %>
+    <%= login_helper %>
 
     <%= yield %>
 
-    <% if session[:source] %>
-      <p>Thanks for visiting me from <%= session[:source] %></p>
-    <% end %>
+    <%= source_helper('application') %>
+
   </body>
 </html>
