@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" data-id="<%= portfolios_item.id %>">
   <%= image_tag portfolios_item.thumb_image, alt: "Card image cap" unless portfolios_item.thumb_image.nil? %>
   <p class="card-text">
     <span><%= link_to portfolios_item.title, portfolio_show_path(portfolios_item.id) %></span>
@@ -15,5 +15,4 @@
         %>
     <% end %>
   </p>
-
 </div>
