@@ -6,6 +6,9 @@ class Portfolio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   scope :by_position, -> { order(position: :asc)}
   scope :ruby_on_rails_items, -> { where(subtitle: 'Ruby on Rails') }
   scope :angular_items, -> { where(subtitle: 'Angular') }
