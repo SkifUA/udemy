@@ -13,7 +13,7 @@ class Portfolio < ApplicationRecord
   scope :ruby_on_rails_items, -> { where(subtitle: 'Ruby on Rails') }
   scope :angular_items, -> { where(subtitle: 'Angular') }
 
-  after_initialize :set_defaults
+  before_validation :set_defaults
 
   def set_defaults
     self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
