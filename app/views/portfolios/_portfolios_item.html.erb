@@ -1,10 +1,14 @@
 <div class="card" data-id="<%= portfolios_item.id %>">
-  <%= image_tag portfolios_item.thumb_image, alt: "Card image cap" unless portfolios_item.thumb_image.nil? %>
+
+  <a href='<%= portfolio_show_path(portfolios_item) %>'>
+    <%= image_tag portfolio_img(portfolios_item.thumb_image, 'thumb'), width: '100%' %>
+  </a>
+
   <p class="card-text">
     <span><%= link_to portfolios_item.title, portfolio_show_path(portfolios_item.id) %></span>
     <%= portfolios_item.subtitle %>
   </p>
-  <!--<p class="card-text"><%#= portfolios_item.body %></p>-->
+
   <p>
     <% if logged_in?(:site_admin)%>
         <%= link_to "Edit Items", edit_portfolio_path(portfolios_item.id) %> /
