@@ -60,7 +60,7 @@ gem 'devise', '~> 4.2'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
-gem 'devcamp_view_tool', git: 'https://github.com/SkifUA/devcamp_view_tool-'
+gem 'devcamp_view_tool'
 
 gem 'petergate', '~> 1.6', '>= 1.6.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
@@ -70,3 +70,4 @@ gem 'carrierwave', '~> 1.1'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.2'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.10'

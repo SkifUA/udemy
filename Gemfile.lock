@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/SkifUA/devcamp_view_tool-
-  revision: c6238aac8e7e80427309f9762133b33520244446
-  specs:
-    devcamp_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -81,6 +75,7 @@ GEM
       carrierwave (>= 0.7, < 2.0)
     childprocess (0.7.1)
       ffi (~> 1.0, >= 1.0.11)
+    cocoon (1.2.10)
     coderay (1.1.1)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -90,6 +85,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    devcamp_view_tool (0.1.0)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -260,8 +256,9 @@ DEPENDENCIES
   capybara (~> 2.13)
   carrierwave (~> 1.1)
   carrierwave-aws (~> 1.2)
+  cocoon (~> 1.2, >= 1.2.10)
   coffee-rails (~> 4.2)
-  devcamp_view_tool!
+  devcamp_view_tool
   devise (~> 4.2)
   dotenv-rails (~> 2.1, >= 2.1.1)
   font-awesome-rails (~> 4.7, >= 4.7.0.2)
@@ -287,4 +284,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.14.5
+   1.15.4
