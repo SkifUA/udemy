@@ -56,6 +56,18 @@ module ApplicationHelper
   end
 
   def check_active path
-    'active' if current_page? path
+    'active' if current_page?(path)
   end
+
+  def alerts
+    alert = flash[:notice] || flash[:error] || flash[:alert]
+    if alert
+      alert_generator(alert)
+    end
+  end
+
+  def alert_generator(msg)
+    js add_gritter(msg, title: "Valerii Kuzin Portfolio", sticky: false)
+  end
+
 end
