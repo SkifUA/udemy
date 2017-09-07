@@ -13,6 +13,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :comment, dependent: :destroy
+
   def name
     name = full_name
     name.present? ? name : self.email
