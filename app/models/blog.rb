@@ -8,6 +8,9 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body
 
+  scope :published, -> { where(status: 1) }
+  scope :recent, -> { order(created_at: :desc) }
+
   belongs_to :topic
   has_many :comment, dependent: :destroy
 
