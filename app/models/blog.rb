@@ -6,7 +6,7 @@ class Blog < ApplicationRecord
   # TODO update selution by use topic
   before_validation :default_topic
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
   scope :published, -> { where(status: 1) }
   scope :recent, -> { order(created_at: :desc) }

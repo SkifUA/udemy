@@ -1,11 +1,11 @@
 <div class="col-sm-8 blog-main">
+  <h2><%= @blog.title %></h2>
+
   <p>
-    <strong>Title:</strong>
-    <%= @blog.title %>
+    <%= @blog.topic.title %>
   </p>
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
   <p>
-    <strong>Body:</strong>
     <%= @blog.body %>
   </p>
 
