@@ -3,7 +3,7 @@
   <p class="blog-post-meta"><%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
   <p class="blog-post-meta">
 
-  <%= render 'admin_actions', blog: blog %>
+  <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
   </p>
   <p class="blog-post-meta"><%= blog.body %></p>
 </div>
