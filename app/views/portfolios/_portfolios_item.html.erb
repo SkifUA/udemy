@@ -1,22 +1,24 @@
-<div class="card" data-id="<%= portfolios_item.id %>">
+<div class="col-md-4">
+  <div class="card" data-id="<%= portfolios_item.id %>">
 
-  <a href='<%= portfolio_show_path(portfolios_item) %>'>
-    <%= image_tag portfolio_img(portfolios_item.thumb_image, 'thumb'), width: '100%' %>
-  </a>
+    <a href='<%= portfolio_show_path(portfolios_item) %>'>
+      <%= image_tag portfolio_img(portfolios_item.thumb_image, 'thumb'), width: '100%' %>
+    </a>
 
-  <p class="card-text">
-    <span><%= link_to portfolios_item.title, portfolio_show_path(portfolios_item.id) %></span>
-    <%= portfolios_item.subtitle %>
-  </p>
+    <p class="card-text">
+      <span><%= link_to portfolios_item.title, portfolio_show_path(portfolios_item.id) %></span>
+      <%= portfolios_item.subtitle %>
+    </p>
 
-  <p>
-    <% if logged_in?(:site_admin)%>
-        <%= link_to "Edit Items", edit_portfolio_path(portfolios_item.id) %> /
-        <%= link_to "Delete portfolio Item",
-                    portfolios_item,
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' }
-        %>
-    <% end %>
-  </p>
+    <p>
+      <% if logged_in?(:site_admin)%>
+          <%= link_to "Edit Items", edit_portfolio_path(portfolios_item.id) %> /
+          <%= link_to "Delete portfolio Item",
+                      portfolios_item,
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' }
+          %>
+      <% end %>
+    </p>
+  </div>
 </div>
