@@ -13,10 +13,10 @@ module BlogsHelper
     coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)
 
     options = {
-      fenced_code_blogs: true,
-      no_intra_emphasis: true,
-      autolink: true,
-      lax_html_blocks: true,
+        fenced_code_blocks: true,
+        no_intra_emphasis: true,
+        autolink: true,
+        lax_html_blocks: true,
     }
 
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
