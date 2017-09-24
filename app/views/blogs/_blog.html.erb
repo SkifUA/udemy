@@ -5,5 +5,5 @@
 
   <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
   </p>
-  <p class="blog-post-meta"><%= blog.body %></p>
+  <p class="blog-post-meta"><%= blog.body.truncate(280, separator: ' ') %></p>
 </div>
