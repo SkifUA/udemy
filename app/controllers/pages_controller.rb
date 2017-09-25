@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    @skills = Skill.all
+    @skills = Skill.all.default_order
   end
 
   def contact
