@@ -16,7 +16,7 @@
           <%= link_to "Delete portfolio Item",
                       portfolios_item,
                       method: :delete,
-                      data: { confirm: 'Are you sure?' }
+                      data: { confirm: I18n.t('portfolio.confirm.delete') }
           %>
       <% end %>
     </p>

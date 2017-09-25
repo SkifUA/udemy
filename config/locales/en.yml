@@ -3,12 +3,16 @@ en:
   access:
     not_logged: 'You are not authorized to access this page'
   blog:
+    confirm:
+      delete: 'A you sure you want to delete this post?'
     page_title: 'My Portfolio Blog'
     create: 'Blog was successfully created.'
     update: 'Blog was successfully updated.'
     destroy: 'Blog was successfully destroyed.'
     toggle_status: 'Post status has been updated.'
   portfolio:
+    confirm:
+      delete: 'A you sure you want to delete this item?'
     create: 'Your Profile Item added.'
     update: 'Blog was successfully updated.'
     destroy: 'Portfolio Items removed.'
