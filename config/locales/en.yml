@@ -6,14 +6,14 @@ en:
     confirm:
       delete: 'A you sure you want to delete this post?'
     page_title: 'My Portfolio Blog'
-    create: 'Blog was successfully created.'
-    update: 'Blog was successfully updated.'
-    destroy: 'Blog was successfully destroyed.'
+    created: 'Blog was successfully created.'
+    updated: 'Blog was successfully updated.'
+    destroyed: 'Blog was successfully destroyed.'
     toggle_status: 'Post status has been updated.'
   portfolio:
     confirm:
       delete: 'A you sure you want to delete this item?'
-    create: 'Your Portfolio Item added.'
-    update: 'Portfolio Item was successfully updated.'
-    destroy: 'Portfolio Item removed.'
+    created: 'Your Portfolio Item added.'
+    updated: 'Portfolio Item was successfully updated.'
+    destroyed: 'Portfolio Item removed.'
 
