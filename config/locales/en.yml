@@ -7,4 +7,9 @@ en:
     create: 'Blog was successfully created.'
     update: 'Blog was successfully updated.'
     destroy: 'Blog was successfully destroyed.'
-    toggle_status: 'Post statuss has been updated.'
+    toggle_status: 'Post status has been updated.'
+  portfolio:
+    create: 'Your Profile Item added.'
+    update: 'Blog was successfully updated.'
+    destroy: 'Portfolio Items removed.'
+
