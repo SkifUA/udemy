@@ -15,7 +15,7 @@ class BlogsController < ApplicationController
       @blogs = Blog.recent.published.page(params[:page]).per(5)
     end
 
-    @page_title = 'My Portfolio Blog'
+    @page_title = I18n.t('blog.page_title')
   end
 
   # GET /blogs/1
@@ -27,7 +27,7 @@ class BlogsController < ApplicationController
       @page_title = @blog.title
       @seo_keywords = @blog.body
     else
-      redirect_to blogs_path, notice: "You are not authorized to access this page"
+      redirect_to blogs_path, notice: I18n.t('access.not_logged')
     end
 
   end
@@ -47,7 +47,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
+        format.html { redirect_to @blog, notice: I18n.t('blog.create') }
       else
         format.html { render :new }
       end
@@ -59,7 +59,7 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to @blog, notice: I18n.t('blog.update') }
         format.json { render :show, status: :ok, location: @blog }
       else
         format.html { render :edit }
@@ -73,7 +73,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to blogs_url, notice: I18n.t('blog.destroy') }
       format.json { head :no_content }
     end
   end
@@ -84,7 +84,7 @@ class BlogsController < ApplicationController
     else
       @blog.draft!
     end
-    redirect_to blogs_url, notice: "Post statuss has been updated"
+    redirect_to blogs_url, notice: I18n.t('blog.toggle_status')
   end
 
   private
